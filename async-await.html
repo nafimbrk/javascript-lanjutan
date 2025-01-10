@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function getData() {
+        async function getData() {
+            let totalClassA = new Promise(function(resolve, reject) {
+                setTimeout(() => {
+                    resolve(30)
+                }, 2000)
+            })
+
+            let totalClassB = new Promise(function(resolve, reject) {
+                setTimeout(() => {
+                    resolve(35)
+                }, 2000)
+            })
+
+            // let total = totalClassA + totalClassB // belom punya nilai + belom punya nilai (object promise)
+            let total = await totalClassA + await totalClassB // script bakal pause di sini sampe selesai
+            console.log(total) // harus kita suruh tunggu dulu, jangan langsung dijalanakan
+        }
+
+        getData()
+    </script>
+</body>
+</html>

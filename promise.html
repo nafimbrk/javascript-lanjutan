@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let promise = new Promise(function(resolve, reject) {
+            // kodingan kalian
+            // let result = false
+            // result ? resolve('proses berhasil') : reject('ada yang error nih')
+
+            resolve(2)
+        })
+
+        // console.log(promise)
+
+        // promise.then(
+        //     result => console.log('ini adalah resolve ' + result),
+        // ).catch(
+        //     error => console.log('ini adalah reject ' + error)
+        // )
+
+        promise.then(
+            result => {
+                console.log(result) // 2
+                return result * 2 // 4 
+            }
+        ).then(
+            result => {
+                console.log(result) // 4
+                return result * 3 // 12
+            }
+        ).then(
+            result => {
+                console.log(result) // 12
+            }
+        )
+    </script>
+</body>
+</html>

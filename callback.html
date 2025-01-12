@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function callData(callback) {
+        //     console.log('ini function call data')
+        //     callback()
+        // }
+
+        // function showData() {
+        //     console.log('ini function show data')
+        // }
+
+        // callData(showData)
+
+        let defaultStudent = ['eko', 'kurniawan', 'khannedy']
+
+        // studentFromDatabase + defaultStudent
+
+        // function get data from database
+        function getDataFromDatabase(callback) {
+            setTimeout(() => {
+                let students = ['herman', 'deni', 'reni']
+
+                callback(students)
+            }, 2000)
+        }
+
+        // function gabung data default + data dari database
+        function mergeStudent(data) {
+            let result = defaultStudent.concat(data)
+            console.log(result)
+        }
+
+        getDataFromDatabase(mergeStudent)
+    </script>
+</body>
+</html>

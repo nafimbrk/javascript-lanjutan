@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>  
+    <script>
+        function test() {
+  try {
+    // let lolos = true
+    if (lolos) {
+      alert('selamat anda lolos ke tahap berikutnya')
+    } else {
+      alert('jangan menyerah')
+    }
+  } catch (error) {
+    alert('ada kesalahan silahkan kontak administrator')
+    alert(error.name)
+    alert(error.message)
+    alert(error)
+  } finally {
+    alert('ini bakal di run terus mau error ataupun gk error')
+  }
+}
+
+test()
+    </script>
+</body>
+</html>
